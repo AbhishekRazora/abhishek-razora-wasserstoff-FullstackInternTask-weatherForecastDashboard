@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TopButtons = () => {
+const TopButtons = ({setQuery}) => {
 
     const cities=[
         {
@@ -29,7 +29,7 @@ const TopButtons = () => {
         {
             cities.map(ct=>(
 <button key={ct.name} className='text-lg font-medium hover:bg-gray-700/20 px-3 py-2
-         rounded-md transition ease-in'>{ct.name}</button>
+         rounded-md transition ease-in' onClick={()=>setQuery({q:ct.name})}>{ct.name}</button>
             ))
         }
         
